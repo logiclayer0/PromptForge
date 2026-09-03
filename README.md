@@ -22,7 +22,7 @@ PromptForge is a powerful AI prompt generator that creates multiple unique promp
 6. **Copy, save, or regenerate** your favorite prompts
 
 ## 📂 Project Structure
-
+```
 promptforge/
 ├── assets/
 │   ├── icons/
@@ -45,7 +45,7 @@ promptforge/
 ├── script.js
 ├── style.css
 └── README.md
-
+```
 
 
 ## 🎯 Categories Available
