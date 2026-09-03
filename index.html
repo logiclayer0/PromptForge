@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PromptForge - AI Prompt Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app-container">
+
+        <header class="header">
+            <div class="logo">
+                <span class="logo-icon">⚡</span>
+                <h1>PromptForge</h1>
+            </div>
+            <div class="header-controls">
+                <button id="themeToggle" class="theme-btn">🌙</button>
+                <button id="favoritesBtn" class="favorites-btn">⭐ Favorites</button>
+            </div>
+        </header>
+
+        <main>
+
+            <section class="input-section">
+                <div class="input-box">
+                    <label for="userInput">Enter 3-4 Words</label>
+                    <input type="text" id="userInput" placeholder="e.g., cat wearing hat, sunset mountain, robot painting" maxlength="50">
+                    <div class="char-count"><span id="charCount">0</span>/50</div>
+                </div>
+
+                <div class="options-row">
+                    <div class="select-group">
+                        <label for="categorySelect">Category</label>
+                        <select id="categorySelect">
+                            <option value="art">🎨 AI Art</option>
+                            <option value="coding">💻 Code</option>
+                            <option value="writing">✍️ Writing</option>
+                            <option value="education">📚 Education</option>
+                            <option value="business">💼 Business</option>
+                            <option value="health">🏥 Health</option>
+                            <option value="travel">✈️ Travel</option>
+                            <option value="tech">🖥️ Tech</option>
+                            <option value="social">📱 Social Media</option>
+                            <option value="lifestyle">🌟 Lifestyle</option>
+                        </select>
+                    </div>
+
+                    <div class="select-group">
+                        <label for="toneSelect">Tone</label>
+                        <select id="toneSelect">
+                            <option value="professional">Professional</option>
+                            <option value="casual">Casual</option>
+                            <option value="funny">Funny</option>
+                            <option value="formal">Formal</option>
+                            <option value="inspiring">Inspiring</option>
+                            <option value="dramatic">Dramatic</option>
+                            <option value="minimalist">Minimalist</option>
+                        </select>
+                    </div>
+
+                    <div class="select-group">
+                        <label for="countSelect">Options</label>
+                        <select id="countSelect">
+                            <option value="5">5 Options</option>
+                            <option value="8" selected>8 Options</option>
+                            <option value="10">10 Options</option>
+                            <option value="15">15 Options</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button id="generateBtn" class="generate-btn">
+                    <span class="btn-icon">⚡</span>
+                    Generate Prompts
+                </button>
+            </section>
+
+            <section id="resultsSection" class="results-section" style="display:none;">
+                <div class="results-header">
+                    <h2>✨ Generated Prompts</h2>
+                    <div class="results-actions">
+                        <button id="exportBtn" class="action-btn">📥 Export All</button>
+                        <button id="clearBtn" class="action-btn">🗑️ Clear</button>
+                    </div>
+                </div>
+                <div id="promptsGrid" class="prompts-grid"></div>
+            </section>
+
+            <section id="favoritesSection" class="favorites-section" style="display:none;">
+                <div class="results-header">
+                    <h2>⭐ Your Favorites</h2>
+                    <button id="closeFavorites" class="close-btn">✕</button>
+                </div>
+                <div id="favoritesGrid" class="prompts-grid"></div>
+            </section>
+
+        </main>
+
+        <footer class="footer">
+            <p>© 2026 PromptForge | Generate unlimited AI prompts</p>
+        </footer>
+
+    </div>
+
+    <div id="toast" class="toast" style="display:none;"></div>
+
+    <script src="script.js"></script>
+   
+</body>
+</html>
