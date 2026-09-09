@@ -12,11 +12,9 @@ function truncatePrompt(text, maxLength = 300) {
     }
     return text;
 }
-
 function addTone(prompt, toneData) {
     return toneData.prefix + prompt + toneData.suffix;
 }
-
 function getTags(category, tone) {
     const categoryNames = {
         art: 'Art', coding: 'Code', writing: 'Writing', education: 'Education',
